@@ -1,0 +1,35 @@
+>> x= 0:1:200;
+>> a_10_b_5 = 0
+
+a_10_b_5 =
+
+     0
+
+>> a_20_b_5 = 0;
+>> a_30_b_5 = 0;
+>> plot(x, a_10_b5, a_20_b_5, a_30_b_5);
+Undefined function or variable 'a_10_b5'.
+ 
+Did you mean:
+>> plot(x, a_10_b_5, a_20_b_5, a_30_b_5);
+>> plot(x, a_10_b_5, x, a_20_b_5, x, a_30_b_5);
+>> plot(x, a_10_b_5, '-', x, a_20_b_5, '--', x, a_30_b_5, ':');
+>> plot(x, a_10_b_5);
+>> plot(x, a_20_b_5);
+>> plot(x, a_30_b_5);
+>> loglog(x, a_10_b_5, x, a_20_b_5, x, a_30_b_5);
+>> semilogy(x, a_10_b_5, x, a_20_b_5, x, a_30_b_5);
+>> semilogy(x, a_10_b_5, x, a_20_b_5, x, a_30_b_5);
+>> a_10_b_75=0; a_20_b_75=0; a_30_b_75=0;
+>> semilogy(x, a_10_b_75, x, a_20_b_75, x, a_30_b_75);
+>> plot(x, a_30_b_75);
+>> a_10_b_9 = 0; a_20_b_9 = 0; a_30_b_9 = 0;
+>> semilogy(x, a_10_b_9, x, a_20_b_9, x, a_30_b_9);
+>> plot(x, a_10_b_5, x, a_10_b_75, x, a_10_b_9);
+>> semilogy(x, a_10_b_9, x, a_20_b_9, x, a_30_b_9);
+>> plot(x, a_20_b_5, x, a_20_b_75, x, a_20_b_9);
+>> plot(x, a_30_b_5, x, a_30_b_75, x, a_30_b_9);
+>> plot(x, a_10_b_75, x, a_30_b_5);
+>> semilogy(x, a_10_b_75, x, a_30_b_5);
+>> semilogy(x, a_10_b_75);
+>> semilogy(x, a_30_b_75, x, a_10_b_9);

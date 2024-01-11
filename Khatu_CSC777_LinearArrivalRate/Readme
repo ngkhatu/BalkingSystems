@@ -1,0 +1,34 @@
+#############################################################################################################
+#-------------Running the Linear Arrival Rate Simulation----------------
+NOTE: Run in seperate folder, since data will be output to seperate files in local directory
+1) In pascal_simulate.cpp set the simulation time: #define simulation_time <length in seconds>
+	- default is 50000
+	- Also adjust the buffer size if needed: #define Buffer_Size <buffer size>
+2) In pascal_simulate.cpp set the alpha and beta values in main() for each thread running a simulation.
+3) Compile the program at the console: make simulate
+4) Run the program at the console: ./pascal_simulate
+	- Data will be output to local directory in files SimData_alp<alpha>_bet<beta>.dat
+5) Import data to program. e.g. MatLab, octave, etc...
+#############################################################################################################
+#-----------Running the Calculations for Pascal Distribution------------------
+1) In pascal_calc.cpp, increase the precision if needed: #define f_precision 2000
+2) Adjust range of k values if needed in the for loop: for(int k=1; k<1500;k++)
+3) For each pair of alpha and beta value calculations, add or edit the run_pascal_calc(int alpha, double beta) calls from main().
+#***********IMPORTANT NOTE: If GMP library isn't installed, follow the directions below before proceeding*********
+4) Save and then compile at console: make calculate
+5) Run the program at the console: ./pascal_calc
+	- Data will be output to local directory in files Prob_alp<alpha>_bet<beta>.dat
+5) Import data to program. e.g. MatLab, octave, etc...
+#############################################################################################################
+#----------Installing GNU Multiple Precision Library
+1) Download and extrace the library from the link: https://ftp.gnu.org/gnu/gmp/gmp-5.1.3.tar.bz2
+2) Use the documentation for reference: https://gmplib.org/gmp-man-5.1.3.pdf
+3) Install the library with the following console commands:
+	./configure
+	make
+	make check		<-- To verify compilation with self-tests
+	sudo make install	<-- Admin access will be needed
+#############################################################################################################
+#---------To remove executable files from local directory----------
+1) At the console use the command: make clean
+#############################################################################################################

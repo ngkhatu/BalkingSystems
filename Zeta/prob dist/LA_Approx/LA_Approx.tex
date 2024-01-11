@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amssymb,amsmath, graphicx}
+\usepackage[margin=.5in]{geometry}
+
+
+
+\begin{document}
+\title{LA Approx}
+\author{Nikhil Khatu}
+\date{11/5/2013}
+\maketitle
+
+
+\\
+$
+\lambda_k = [\alpha + (k - \alpha) \beta]\\
+\mu_k = k\mu\\
+$
+\\
+%A.16
+$
+p_k = p_0\prod_{j=0}^{k-1} \frac{\lambda_j}{\mu_j + 1}
+$
+
+
+\\
+$
+p_k = p_0\left(\frac{\beta}{\mu}\right)^k \frac{1}{k!}a(a + 1) ... (a + k - 1)
+$
+\\
+where\\
+$
+a \equiv \frac{\alpha}{\beta}(1 - \beta)
+$
+
+\\
+%A.3
+$
+(1-x)^{-a} = \sum_{k=0}^\infty \frac{a(a + 1) ... (a + k - 1)x^k}{k!}
+$
+\\
+$
+p_k = \frac{1}{\left(1 - \frac{\beta}{\mu}\right)^{-a}} \left(\frac{\beta}{\mu}\right)^k \frac{a(a + 1) ... (a + k - 1)}{k!}\\
+$
+
+%----------------------------------------
+%Pascal
+
+$
+p_k = \begin{pmatrix}n + k - 1\\k\end{pmatrix} p^nq^k\\
+p+q = 1, 0 < p < 1 \\
+q = \frac{\beta}{\mu}\\
+p = 1 - \frac{\beta}{\mu}\\
+n = a\\
+\mu = 1\\
+E(x) = \frac{nq}{p} \Rightarrow M = \alpha\\
+var(x) = \frac{nq}{p^2} \Rightarrow V = \frac{\alpha}{1 - \beta}
+$
+
+$
+Z = \frac{V}{M} = \frac{1}{1-\beta}
+$
+
+
+\end{document}
